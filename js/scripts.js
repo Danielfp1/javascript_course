@@ -23,6 +23,6 @@
 // *******************************
 
 
-var user_name = "Daniel";
+// var user_name = "Daniel";
 
-document.getElementById("user_greeting_message").innerHTML = "Hello " + user_name + "!";
+// document.getElementById("user_greeting_message").innerHTML = "Hello " + user_name + "!";
