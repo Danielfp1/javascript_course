@@ -70,10 +70,10 @@
 //Lesson 18 - Objects Methods
 // *******************************
 
-var student = {
-    'firstName': 'Marie',
-    'lastName': 'Smith',
-    'fullName': function() {
-        return this.firstName + ' ' + this.lastName;
-    }
-}
+// var student = {
+//     'firstName': 'Marie',
+//     'lastName': 'Smith',
+//     'fullName': function() {
+//         return this.firstName + ' ' + this.lastName;
+//     }
+// }
