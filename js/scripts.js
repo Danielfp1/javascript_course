@@ -42,25 +42,38 @@
 // employee.passport = "1023456";
 
 
-var courses = [{
-        'title': 'Learn code in Python 3',
-        'reviews': 6802,
-        'students': 130129,
-        'categories': ['programming', 'technology']
-    },
+// var courses = [{
+//         'title': 'Learn code in Python 3',
+//         'reviews': 6802,
+//         'students': 130129,
+//         'categories': ['programming', 'technology']
+//     },
 
-    {
-        'title': 'Learn PHP -  Beginner to Advanced',
-        'reviews': 1204,
-        'students': 30521,
-        'categories': ['web development', 'programming']
-    },
+//     {
+//         'title': 'Learn PHP -  Beginner to Advanced',
+//         'reviews': 1204,
+//         'students': 30521,
+//         'categories': ['web development', 'programming']
+//     },
 
-    {
-        'title': 'Learn Microsoft Excel 2020',
-        'reviews': 4209,
-        'students': 18560,
-        'categories': ['productivity', 'business']
+//     {
+//         'title': 'Learn Microsoft Excel 2020',
+//         'reviews': 4209,
+//         'students': 18560,
+//         'categories': ['productivity', 'business']
+//     }
+
+// ];
+
+
+//********************************
+//Lesson 18 - Objects Methods
+// *******************************
+
+var student = {
+    'firstName': 'Marie',
+    'lastName': 'Smith',
+    'fullName': function() {
+        return this.firstName + ' ' + this.lastName;
     }
-
-];
+}
