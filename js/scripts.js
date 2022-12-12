@@ -67,13 +67,29 @@
 
 
 //********************************
-//Lesson 18 - Objects Methods
+//Lesson 22 - Events
 // *******************************
 
-// var student = {
-//     'firstName': 'Marie',
-//     'lastName': 'Smith',
-//     'fullName': function() {
-//         return this.firstName + ' ' + this.lastName;
-//     }
+// document.getElementById("click-me").onclick = function() {
+//     alert("You clicked the button");
 // }
+
+document.getElementById("hover-me").onmouseover = function() {
+    alert("You moved the cursor over me");
+}
+
+document.getElementById("leave-me").onmouseout = function() {
+    alert("You moved the cursor out of me");
+}
+
+document.onkeydown = function(event) {
+    if (event.keyCode == '65') {
+        alert("Do something if letter 'a' is pressed.");
+    }
+};
+
+//Event manipulation via html attribute
+
+function show_alert() {
+    alert("You clicked the button");
+}
