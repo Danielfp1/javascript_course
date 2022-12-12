@@ -74,22 +74,42 @@
 //     alert("You clicked the button");
 // }
 
-document.getElementById("hover-me").onmouseover = function() {
-    alert("You moved the cursor over me");
-}
+// document.getElementById("hover-me").onmouseover = function() {
+//     alert("You moved the cursor over me");
+// }
 
-document.getElementById("leave-me").onmouseout = function() {
-    alert("You moved the cursor out of me");
-}
+// document.getElementById("leave-me").onmouseout = function() {
+//     alert("You moved the cursor out of me");
+// }
 
-document.onkeydown = function(event) {
-    if (event.keyCode == '65') {
-        alert("Do something if letter 'a' is pressed.");
-    }
-};
+// document.onkeydown = function(event) {
+//     if (event.keyCode == '65') {
+//         alert("Do something if letter 'a' is pressed.");
+//     }
+// };
 
-//Event manipulation via html attribute
+// //Event manipulation via html attribute
 
-function show_alert() {
-    alert("You clicked the button");
+// function show_alert() {
+//     alert("You clicked the button");
+// }
+
+//********************************
+//Lesson 23 - CSS Manipulation
+// *******************************
+
+// document.getElementById("color_button").onclick = function() {
+//     document.getElementById("color_button").style.backgroundColor = "purple";
+//     document.getElementById("color_button").style.transform = "TranslateX(100px)";
+// }
+
+// document.getElementById("color_button").onclick = function() {
+//     this.style.backgroundColor = "purple";
+//     this.style.transform = "TranslateX(100px)";
+// }
+
+var button = document.getElementById("color_button");
+button.onclick = function() {
+    this.style.backgroundColor = "purple";
+    this.style.transform = "TranslateX(100px)";
 }
