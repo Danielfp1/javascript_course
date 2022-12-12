@@ -108,8 +108,27 @@
 //     this.style.transform = "TranslateX(100px)";
 // }
 
-var button = document.getElementById("color_button");
-button.onclick = function() {
-    this.style.backgroundColor = "purple";
-    this.style.transform = "TranslateX(100px)";
+// var button = document.getElementById("color_button");
+// button.onclick = function() {
+//     this.style.backgroundColor = "purple";
+//     this.style.transform = "TranslateX(100px)";
+// }
+
+//********************************
+//Lesson 28 - Conditionals 
+// *******************************
+
+var name = "";
+if (name) {
+    console.log("The name is " + name);
+} else {
+    console.log("The name has not been informed");
 }
+
+
+var name = "Daniel";
+console.log(name ? "The name is " + name : "The name has not been informed");
+
+
+var age = 70;
+console.log(age < 18 ? 'Underage' : age >= 65 ? 'Senior' : 'Adult');
