@@ -118,17 +118,73 @@
 //Lesson 28 - Conditionals 
 // *******************************
 
-var name = "";
-if (name) {
-    console.log("The name is " + name);
-} else {
-    console.log("The name has not been informed");
+// var name = "";
+// if (name) {
+//     console.log("The name is " + name);
+// } else {
+//     console.log("The name has not been informed");
+// }
+
+
+// var name = "Daniel";
+// console.log(name ? "The name is " + name : "The name has not been informed");
+
+
+// var age = 70;
+// console.log(age < 18 ? 'Underage' : age >= 65 ? 'Senior' : 'Adult');
+
+
+//********************************
+//Lesson 29 - Nested Loops and Conditionals
+// *******************************
+
+// var isMember = false;
+// var age = 25;
+
+// if (isMember == true || age >= 65) {
+//     console.log('Free');
+// } else {
+
+//     if (age < 18) {
+//         console.log('$ 6.00');
+//     } else {
+//         console.log('$ 12.00');
+//     }
+// }
+
+var employees = [
+
+    {
+        'name': 'Charles Silva',
+        'age': 45,
+        'children': ['Andrew Silva', 'Maria Silva']
+
+    },
+
+    {
+        'name': 'Elizabeth Green',
+        'age': 32,
+        'children': ['Peter Green']
+
+    },
+
+    {
+        'name': 'George Banks',
+        'age': 39,
+        'children': ['Philipp Banks', 'Rose Banks', 'Tara Banks']
+
+    }
+
+];
+
+
+document.getElementById("children").innerHTML = "";
+for (var a = 0; a < employees.length; a++) {
+    var childrenList = employees[a].children;
+
+    for (var b = 0; b < childrenList.length; b++) {
+        var child = childrenList[b];
+        document.getElementById("children").innerHTML += "<li>" + child + "</li>";
+    }
+
 }
-
-
-var name = "Daniel";
-console.log(name ? "The name is " + name : "The name has not been informed");
-
-
-var age = 70;
-console.log(age < 18 ? 'Underage' : age >= 65 ? 'Senior' : 'Adult');
