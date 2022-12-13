@@ -205,3 +205,14 @@
 // const PI = 3.14159;
 // PI = 0; // This will result in error because we can't change the constant's value.
 // // Why would we want to change PI's value anyway?
+
+
+//********************************
+//Lesson 35 - BOM Browser Object Model
+// *******************************
+
+window.onmousemove = function(e) {
+    if (e.pageY < 5) {
+        alert("Don't miss our flash sale. Go to the the products section for exclusive discounts.");
+    }
+};
