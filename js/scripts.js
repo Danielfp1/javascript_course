@@ -152,39 +152,56 @@
 //     }
 // }
 
-var employees = [
+// var employees = [
 
-    {
-        'name': 'Charles Silva',
-        'age': 45,
-        'children': ['Andrew Silva', 'Maria Silva']
+//     {
+//         'name': 'Charles Silva',
+//         'age': 45,
+//         'children': ['Andrew Silva', 'Maria Silva']
 
-    },
+//     },
 
-    {
-        'name': 'Elizabeth Green',
-        'age': 32,
-        'children': ['Peter Green']
+//     {
+//         'name': 'Elizabeth Green',
+//         'age': 32,
+//         'children': ['Peter Green']
 
-    },
+//     },
 
-    {
-        'name': 'George Banks',
-        'age': 39,
-        'children': ['Philipp Banks', 'Rose Banks', 'Tara Banks']
+//     {
+//         'name': 'George Banks',
+//         'age': 39,
+//         'children': ['Philipp Banks', 'Rose Banks', 'Tara Banks']
 
+//     }
+
+// ];
+
+
+// document.getElementById("children").innerHTML = "";
+// for (var a = 0; a < employees.length; a++) {
+//     var childrenList = employees[a].children;
+
+//     for (var b = 0; b < childrenList.length; b++) {
+//         var child = childrenList[b];
+//         document.getElementById("children").innerHTML += "<li>" + child + "</li>";
+//     }
+
+// }
+
+
+//********************************
+//Lesson 30 - Variable Scope
+// *******************************
+
+for (let a = 0; a < 3; a++) {
+    console.log('Parent loop count: ', a);
+
+    for (let a = 0; a < 3; a++) {
+        console.log('Child loop count: ', a);
     }
-
-];
-
-
-document.getElementById("children").innerHTML = "";
-for (var a = 0; a < employees.length; a++) {
-    var childrenList = employees[a].children;
-
-    for (var b = 0; b < childrenList.length; b++) {
-        var child = childrenList[b];
-        document.getElementById("children").innerHTML += "<li>" + child + "</li>";
-    }
-
 }
+
+const PI = 3.14159;
+PI = 0; // This will result in error because we can't change the constant's value.
+// Why would we want to change PI's value anyway?
