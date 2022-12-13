@@ -194,14 +194,14 @@
 //Lesson 30 - Variable Scope
 // *******************************
 
-for (let a = 0; a < 3; a++) {
-    console.log('Parent loop count: ', a);
+// for (let a = 0; a < 3; a++) {
+//     console.log('Parent loop count: ', a);
 
-    for (let a = 0; a < 3; a++) {
-        console.log('Child loop count: ', a);
-    }
-}
+//     for (let a = 0; a < 3; a++) {
+//         console.log('Child loop count: ', a);
+//     }
+// }
 
-const PI = 3.14159;
-PI = 0; // This will result in error because we can't change the constant's value.
-// Why would we want to change PI's value anyway?
+// const PI = 3.14159;
+// PI = 0; // This will result in error because we can't change the constant's value.
+// // Why would we want to change PI's value anyway?
