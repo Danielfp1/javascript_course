@@ -211,8 +211,23 @@
 //Lesson 35 - BOM Browser Object Model
 // *******************************
 
-window.onmousemove = function(e) {
-    if (e.pageY < 5) {
-        alert("Don't miss our flash sale. Go to the the products section for exclusive discounts.");
-    }
-};
+// window.onmousemove = function(e) {
+//     if (e.pageY < 5) {
+//         alert("Don't miss our flash sale. Go to the the products section for exclusive discounts.");
+//     }
+// };
+
+//********************************
+//Lesson 37 - Calculation date intervals
+// *******************************
+
+// Challenge: Calculating date intervals ***************
+// If a product is ordered on March 26, 2020 and delivered on April, 02, 2020, how many days does it take to be delivered?
+
+document.getElementById("delivery_time").innerHTML = "";
+var orderDate = new Date("2020-03-26")
+var deliveryDate = new Date("2020-04-02")
+
+var diferenca = Math.floor((deliveryDate - orderDate) / 86400000);
+
+document.getElementById("delivery_time").innerHTML = diferenca;
