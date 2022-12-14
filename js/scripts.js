@@ -243,19 +243,42 @@
 //     console.log("Message 2");
 // }, 3000);
 
-// document.getElementById("show-loader").onclick = function() {
-//     document.getElementById("spinner-loader").style.display = "block";
-//     window.setTimeout(() => {
-//         document.getElementById("spinner-loader").style.display = "none";
-//     }, 3000);
-// }
+document.getElementById("show-loader").onclick = function() {
+    document.getElementById("spinner-loader").style.display = "block";
+    window.setTimeout(() => {
+        document.getElementById("spinner-loader").style.display = "none";
+    }, 3000);
+}
 
 
-var count = 0;
-var timeInternal = window.setInterval(function() {
-    console.log(count);
-    count++;
-    if (count >= 5) {
-        window.clearInterval(timeInternal);
+// var count = 0;
+// var timeInternal = window.setInterval(function() {
+//     console.log(count);
+//     count++;
+//     if (count >= 5) {
+//         window.clearInterval(timeInternal);
+//     }
+// }, 1000);
+
+//********************************
+//Lesson 38 - Challenge: Clock
+// *******************************
+
+function add_leading_zero(number) {
+    if (number < 10) {
+        return "0" + number.toString();
+    } else {
+        return number.toString();
     }
+}
+
+var timeInternal = window.setInterval(function() {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    document.getElementById("hours").innerHTML = add_leading_zero(hours);
+    document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
+    document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
 }, 1000);
