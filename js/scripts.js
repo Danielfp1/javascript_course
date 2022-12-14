@@ -224,10 +224,38 @@
 // Challenge: Calculating date intervals ***************
 // If a product is ordered on March 26, 2020 and delivered on April, 02, 2020, how many days does it take to be delivered?
 
-document.getElementById("delivery_time").innerHTML = "";
-var orderDate = new Date("2020-03-26")
-var deliveryDate = new Date("2020-04-02")
+// document.getElementById("delivery_time").innerHTML = "";
+// var orderDate = new Date("2020-03-26")
+// var deliveryDate = new Date("2020-04-02")
 
-var diferenca = Math.floor((deliveryDate - orderDate) / 86400000);
+// var diferenca = Math.floor((deliveryDate - orderDate) / 86400000);
 
-document.getElementById("delivery_time").innerHTML = diferenca;
+// document.getElementById("delivery_time").innerHTML = diferenca;
+
+
+//********************************
+//Lesson 38 - Time Methods
+// *******************************
+
+// console.log("Message 1");
+
+// window.setTimeout(function() {
+//     console.log("Message 2");
+// }, 3000);
+
+// document.getElementById("show-loader").onclick = function() {
+//     document.getElementById("spinner-loader").style.display = "block";
+//     window.setTimeout(() => {
+//         document.getElementById("spinner-loader").style.display = "none";
+//     }, 3000);
+// }
+
+
+var count = 0;
+var timeInternal = window.setInterval(function() {
+    console.log(count);
+    count++;
+    if (count >= 5) {
+        window.clearInterval(timeInternal);
+    }
+}, 1000);
