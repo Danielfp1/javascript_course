@@ -243,12 +243,12 @@
 //     console.log("Message 2");
 // }, 3000);
 
-document.getElementById("show-loader").onclick = function() {
-    document.getElementById("spinner-loader").style.display = "block";
-    window.setTimeout(() => {
-        document.getElementById("spinner-loader").style.display = "none";
-    }, 3000);
-}
+// document.getElementById("show-loader").onclick = function() {
+//     document.getElementById("spinner-loader").style.display = "block";
+//     window.setTimeout(() => {
+//         document.getElementById("spinner-loader").style.display = "none";
+//     }, 3000);
+// }
 
 
 // var count = 0;
@@ -261,24 +261,76 @@ document.getElementById("show-loader").onclick = function() {
 // }, 1000);
 
 //********************************
-//Lesson 38 - Challenge: Clock
+//Lesson 39 - Challenge: Clock
 // *******************************
 
-function add_leading_zero(number) {
-    if (number < 10) {
-        return "0" + number.toString();
-    } else {
-        return number.toString();
-    }
+// function add_leading_zero(number) {
+//     if (number < 10) {
+//         return "0" + number.toString();
+//     } else {
+//         return number.toString();
+//     }
+// }
+
+// var timeInternal = window.setInterval(function() {
+//     var currentTime = new Date();
+//     var hours = currentTime.getHours();
+//     var minutes = currentTime.getMinutes();
+//     var seconds = currentTime.getSeconds();
+
+//     document.getElementById("hours").innerHTML = add_leading_zero(hours);
+//     document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
+//     document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
+// }, 1000);
+
+
+
+//********************************
+//Lesson 41 - Forms
+// *******************************
+
+document.getElementById("show_option").onclick = function() {
+
+    var selectField = document.getElementById("options");
+    var selectedOption = selectField.options.selectedIndex;
+    var selectedValue = selectField.options[selectedOption].innerHTML;
+    document.getElementById("selected_option").innerHTML = selectedValue;
+
+    // var selectedOption = document.getElementById("options").value;
+    // document.getElementById("selected_option").innerHTML = selectedOption;
 }
 
-var timeInternal = window.setInterval(function() {
-    var currentTime = new Date();
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-    var seconds = currentTime.getSeconds();
 
-    document.getElementById("hours").innerHTML = add_leading_zero(hours);
-    document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
-    document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
-}, 1000);
+document.getElementById("show_radio").onclick = function() {
+
+    var radio = document.getElementsByName("gender");
+    var radio_selected;
+
+    for (var a = 0; a < radio.length; a++) {
+        if (radio[a].checked) {
+            radio_selected = radio[a].value;
+        }
+    }
+
+    document.getElementById("selected_radio").innerHTML = radio_selected;
+};
+
+//********************************
+//Lesson 42 - Forms (Part 2)
+// *******************************
+
+document.getElementById("show_check").onclick = function() {
+
+
+    var check = document.getElementsByName("interest");
+
+    document.getElementById("selected_check").innerHTML = "";
+
+    for (var b = 0; b < check.length; b++) {
+        if (check[b].checked) {
+            document.getElementById("selected_check").innerHTML += '<li>' + check[b].value + '</li>';
+        }
+    }
+
+
+};
