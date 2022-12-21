@@ -289,48 +289,77 @@
 //Lesson 41 - Forms
 // *******************************
 
-document.getElementById("show_option").onclick = function() {
+// document.getElementById("show_option").onclick = function() {
 
-    var selectField = document.getElementById("options");
-    var selectedOption = selectField.options.selectedIndex;
-    var selectedValue = selectField.options[selectedOption].innerHTML;
-    document.getElementById("selected_option").innerHTML = selectedValue;
+//     var selectField = document.getElementById("options");
+//     var selectedOption = selectField.options.selectedIndex;
+//     var selectedValue = selectField.options[selectedOption].innerHTML;
+//     document.getElementById("selected_option").innerHTML = selectedValue;
 
-    // var selectedOption = document.getElementById("options").value;
-    // document.getElementById("selected_option").innerHTML = selectedOption;
-}
+//     // var selectedOption = document.getElementById("options").value;
+//     // document.getElementById("selected_option").innerHTML = selectedOption;
+// }
 
 
-document.getElementById("show_radio").onclick = function() {
+// document.getElementById("show_radio").onclick = function() {
 
-    var radio = document.getElementsByName("gender");
-    var radio_selected;
+//     var radio = document.getElementsByName("gender");
+//     var radio_selected;
 
-    for (var a = 0; a < radio.length; a++) {
-        if (radio[a].checked) {
-            radio_selected = radio[a].value;
-        }
-    }
+//     for (var a = 0; a < radio.length; a++) {
+//         if (radio[a].checked) {
+//             radio_selected = radio[a].value;
+//         }
+//     }
 
-    document.getElementById("selected_radio").innerHTML = radio_selected;
-};
+//     document.getElementById("selected_radio").innerHTML = radio_selected;
+// };
 
 //********************************
 //Lesson 42 - Forms (Part 2)
 // *******************************
 
-document.getElementById("show_check").onclick = function() {
+// document.getElementById("show_check").onclick = function() {
 
 
-    var check = document.getElementsByName("interest");
+//     var check = document.getElementsByName("interest");
 
-    document.getElementById("selected_check").innerHTML = "";
+//     document.getElementById("selected_check").innerHTML = "";
 
-    for (var b = 0; b < check.length; b++) {
-        if (check[b].checked) {
-            document.getElementById("selected_check").innerHTML += '<li>' + check[b].value + '</li>';
-        }
-    }
+//     for (var b = 0; b < check.length; b++) {
+//         if (check[b].checked) {
+//             document.getElementById("selected_check").innerHTML += '<li>' + check[b].value + '</li>';
+//         }
+//     }
 
+
+// };
+
+
+//********************************
+//Lesson 43 - The onchange Event
+// *******************************
+
+document.getElementById("education_level").onchange = function() {
+
+    var selectField = document.getElementById("education_level");
+    var selectedOption = selectField.options.selectedIndex;
+    var selectedValue = selectField.options[selectedOption].innerHTML;
+    document.getElementById("selected_level").innerHTML = selectedValue;
 
 };
+
+var check = document.getElementsByName("meal");
+for (var a = 0; a < check.length; a++) {
+    check[a].onchange = function() {
+        document.getElementById("selected_check").innerHTML = "";
+
+        for (var b = 0; b < check.length; b++) {
+
+            if (check[b].checked == true) {
+                document.getElementById("selected_check").innerHTML += '<li>' + check[b].value + '</li>';
+            }
+        }
+        document.getElementById("selected_check").innerHTML += "</ul>";
+    }
+}
