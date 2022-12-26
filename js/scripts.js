@@ -340,26 +340,26 @@
 //Lesson 43 - The onchange Event
 // *******************************
 
-document.getElementById("education_level").onchange = function() {
+// document.getElementById("education_level").onchange = function() {
 
-    var selectField = document.getElementById("education_level");
-    var selectedOption = selectField.options.selectedIndex;
-    var selectedValue = selectField.options[selectedOption].innerHTML;
-    document.getElementById("selected_level").innerHTML = selectedValue;
+//     var selectField = document.getElementById("education_level");
+//     var selectedOption = selectField.options.selectedIndex;
+//     var selectedValue = selectField.options[selectedOption].innerHTML;
+//     document.getElementById("selected_level").innerHTML = selectedValue;
 
-};
+// };
 
-var check = document.getElementsByName("meal");
-for (var a = 0; a < check.length; a++) {
-    check[a].onchange = function() {
-        document.getElementById("selected_check").innerHTML = "";
+// var check = document.getElementsByName("meal");
+// for (var a = 0; a < check.length; a++) {
+//     check[a].onchange = function() {
+//         document.getElementById("selected_check").innerHTML = "";
 
-        for (var b = 0; b < check.length; b++) {
+//         for (var b = 0; b < check.length; b++) {
 
-            if (check[b].checked == true) {
-                document.getElementById("selected_check").innerHTML += '<li>' + check[b].value + '</li>';
-            }
-        }
-        document.getElementById("selected_check").innerHTML += "</ul>";
-    }
-}
+//             if (check[b].checked == true) {
+//                 document.getElementById("selected_check").innerHTML += '<li>' + check[b].value + '</li>';
+//             }
+//         }
+//         document.getElementById("selected_check").innerHTML += "</ul>";
+//     }
+// }
