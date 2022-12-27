@@ -60,6 +60,37 @@ var ourServices = [{
 
 ];
 
+var previousArrow = document.getElementById("service-previous");
+var nextArrow = document.getElementById("service-next");
+var serviceTitleArea = document.getElementById("service-title");
+var serviceTextArea = document.getElementById("service-text");
+
+var currentService = 0;
+
+nextArrow.onclick = function() {
+    if (currentService == ourServices.length - 1) {
+        currentService = 0;
+    } else {
+        currentService += 1;
+    }
+    var title = ourServices[currentService].title;
+    var text = ourServices[currentService].text;
+    serviceTitleArea.innerHTML = title;
+    serviceTextArea.innerHTML = text;
+}
+
+previousArrow.onclick = function() {
+    if (currentService == 0) {
+        currentService = ourServices.length - 1;
+    } else {
+        currentService -= 1;
+    }
+    var title = ourServices[currentService].title;
+    var text = ourServices[currentService].text;
+    serviceTitleArea.innerHTML = title;
+    serviceTextArea.innerHTML = text;
+}
+
 
 
 
