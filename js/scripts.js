@@ -363,3 +363,40 @@
 //         document.getElementById("selected_check").innerHTML += "</ul>";
 //     }
 // }
+
+
+//********************************
+//Lesson 57 - JQuery - Syntax
+// *******************************
+
+// $("#hide").click(function() {
+//     $(".example").hide();
+// });
+
+
+//********************************
+//Lesson 58 - JQuery - DOM Manipulation
+// *******************************
+
+// var text_content = $("#sample-text-only").html();
+// console.log(text_content);
+
+// var print = $("#link-element").attr("href", "http://udemy.com");
+// console.log(print);
+
+//change_image
+//imagem_js
+
+// $("#change_image").click(function() {
+//     $("#imagem_js").attr("src", "https://pcodinomebzero.neocities.org/Imagens/javascript1.png")
+//     $("#change_image").hide();
+// });
+
+// // Remove the content but keep the element:
+// $("#empty_paragraph").empty();
+
+// // Erase the element:
+// $("#empty_paragraph").remove();
+
+// // Keep content but hide the element:
+// $("#empty_paragraph").hide();
