@@ -96,3 +96,5 @@ previousArrow.onclick = function() {
 
 
 // Footer
+
+document.getElementById("current_year").innerHTML = new Date().getFullYear();
